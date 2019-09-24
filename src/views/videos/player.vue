@@ -11,6 +11,7 @@
   export default {
     name: 'player',
     data () {
+      // div标题
       let videoTitle = this.$route.query.videoTitle;
       if (!videoTitle || Object.keys(videoTitle).length==0) {
         videoTitle = '暂无播放内容';
@@ -86,8 +87,8 @@
 
 <style scoped>
   #video {
-    width: 600px;
-    height: 400px;
+    /*width: 600px;*/
+    /*height: 400px;*/
     margin: 0px auto;
   }
 </style>
