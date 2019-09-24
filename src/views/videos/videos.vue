@@ -12,12 +12,9 @@
       fit
       highlight-current-row>
       <el-table-column align="center" label="视频标题">
-        <template v-for="record in list">
-          <router-link :to="'player?videoTitle='+record">{{ record }}</router-link>
+        <template slot-scope="scope">
+          <router-link :to="'player?videoTitle='+scope.row">{{ scope.row }}</router-link>
         </template>
-        <!--<template slot-scope="scope">
-          <router-link to="'/videos/player?videoTitle='+scope.row.videoTitle">{{ scope.row.videoTitle }}</router-link>
-        </template>-->
       </el-table-column>
     </el-table>
 <!--    <pagination v-show="total>0" :total="total" :page-no.sync="listQuery.pageNo" :page-size.sync="listQuery.pageSize" @pagination="getList"/>-->
@@ -34,7 +31,7 @@
         return {
           tableKey: 0,
           list: null,
-          listLoading: false,
+          listLoading: true,
           activeTab: 'base',
           listQuery: {
             pageNo: 1,
