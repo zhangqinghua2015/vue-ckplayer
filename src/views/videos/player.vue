@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <label>
-      <span v-for="item in items" :key="item.label"> {{item.label}}</span>
-    </label>
+  <div class="app-container">
+    <div class="title">
+      <label>
+        <span v-for="item in items" :key="item.label"> {{item.label}}</span>
+      </label>
+    </div>
     <div id="video"></div>
   </div>
 </template>
@@ -86,6 +88,10 @@
 </script>
 
 <style scoped>
+  .title {
+    margin-bottom: 15px;
+  }
+
   #video {
     /*width: 600px;*/
     /*height: 400px;*/
